@@ -3,7 +3,7 @@ name: Build Image
 on: [push, pull_request, workflow_dispatch]
 
 env:
-  ENDPOINT: "roblkyogre/kasm-volume-plugin"
+  ENDPOINT: "roblkyogre/kasm-rclone-plugin"
   BRANCH: "master"
 
 jobs:
