@@ -3,7 +3,7 @@ name: Build Image
 on: [push, pull_request, workflow_dispatch]
 
 env:
-  ENDPOINT: "roblkyogre/linuxserver-mods"
+  ENDPOINT: "roblkyogre/kasm-volume-plugin"
   BRANCH: "master"
 
 jobs:
