@@ -10,4 +10,5 @@ while [ ! -S /var/run/docker.sock ]; do
   sleep 1
 done
 
+docker plugin rm rclone
 docker plugin install rclone/docker-volume-rclone:${ARCH} args="-v" --alias rclone --grant-all-permissions
