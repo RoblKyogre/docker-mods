@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+
+# docker commands require socket to be active
+while [ ! -S /var/run/docker.sock ]; do
+  sleep 1
+done
+
 ARCH=$(uname -m | sed 's/aarch64/arm64/g' | sed 's/x86_64/amd64/g')
 DOCKER_PLUGIN_DIR=$(docker info | awk -F': ' '/Docker Root Dir/ {print $2}')-plugins
 
